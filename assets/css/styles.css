@@ -1,0 +1,52 @@
+.backgroundColorNav {
+    background-color: #307FE8;
+    color: black;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+}
+
+.textNav {
+    color: white !important;
+    font-weight: 600;;
+}
+
+.heighFull {
+    height: 100vh;
+}
+
+.section-one {
+    padding-top: 64px;
+}
+
+.title-section-one-welcome {
+    color: #307FE8;
+    font-size: 50px;
+    margin-bottom: -30px;
+    margin-top: -40px
+}
+
+.title-section-one-ideaname {
+    color: #307FE8;
+    font-size: 70px;
+    font-weight: 800;
+}
+
+.texto-subtitulo {
+    font-size: 20px;
+    max-width: 80%;
+    font-weight: 500;
+}
+
+.logo { 
+    margin-left: 120px;
+    width: 60px;
+    padding-right: 20px;
+}
+
+.d-flex{
+    margin-left: 120px;
+    margin-right: 120px;
+}
