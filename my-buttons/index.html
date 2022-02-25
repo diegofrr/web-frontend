@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <style>
+       /*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+ @import url('https://fonts.googleapis.com/css2?family=Poppins');
+
+ :root {
+     --cor: linear-gradient(45deg, blue, pink);
+ }
+
+ * {
+     text-decoration: none;
+     padding: 0;
+     margin: 0;
+     -webkit-box-sizing: border-box;
+             box-sizing: border-box;
+     font-family: sans-serif;
+     font-family: 'Poppins', sans-serif;
+ }
+
+ .section-one {
+     width: 100%;
+     height: 100vh;
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: flex;
+     -webkit-box-pack: center;
+         -ms-flex-pack: center;
+             justify-content: center;
+     -webkit-box-align: center;
+         -ms-flex-align: center;
+             align-items: center;
+     -webkit-box-orient: vertical;
+     -webkit-box-direction: normal;
+         -ms-flex-direction: column;
+             flex-direction: column;
+     gap: 10px;
+ }
+
+ .botao a {
+     background-color: #1dacff;
+     width: 200px;
+     height: 50px;
+     border-radius: .5em;
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: flex;
+     -webkit-box-orient: horizontal;
+     -webkit-box-direction: normal;
+         -ms-flex-direction: row;
+             flex-direction: row;
+     -webkit-box-pack: space-evenly;
+         -ms-flex-pack: space-evenly;
+             justify-content: space-evenly;
+     -webkit-box-align: center;
+         -ms-flex-align: center;
+             align-items: center;
+     color: white;
+     border: 2px solid transparent;
+     -webkit-transition: all .5s linear;
+     -o-transition: all .5s linear;
+     transition: all .5s linear;
+ }
+
+ .botao a p {
+     font-weight: 800;
+     position: absolute;
+     font-size: .9em;
+ }
+
+ .botao a i {
+     font-size: 1.2em;
+     width: 100%;
+     text-align: right;
+     padding-right: .5em;
+
+ }
+
+ .botao a:hover {
+     border-color: #1dacff;
+     background-color: transparent;
+     color: #1dacff;
+     -webkit-transition: all .5s linear;
+     -o-transition: all .5s linear;
+     transition: all .5s linear;
+ }
+
+
+ .botao2 a {
+     background: -o-linear-gradient(45deg, pink, rgb(111, 0, 255), pink);
+     background: linear-gradient(45deg, pink, rgb(111, 0, 255), pink);
+     background-size: 1000px;
+     background-position-x: -700px;
+     width: 200px;
+     height: 50px;
+     border-radius: .5em;
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: flex;
+     -webkit-box-orient: horizontal;
+     -webkit-box-direction: reverse;
+         -ms-flex-flow: row-reverse;
+             flex-flow: row-reverse;
+     -webkit-box-align: center;
+         -ms-flex-align: center;
+             align-items: center;
+     color: white;
+     -webkit-transition: all .5s linear;
+     -o-transition: all .5s linear;
+     transition: all .5s linear;
+ }
+
+ .botao2 a p {
+     font-weight: 800;
+     font-size: .9em;
+     width: 200px;
+     text-align: center;
+     position: absolute;
+ }
+
+ .botao2 a i {
+     font-size: 1.2em;
+     width: 100%;
+     padding-left: 15px;
+ }
+
+ .botao2 a:hover {
+     padding-left: 155px;
+     background-position-x: 900px;
+     -webkit-transition: all .5s linear;
+     -o-transition: all .5s linear;
+     transition: all .5s linear;
+ }
+
+ .botao3 a {
+     background-color: #1dacff;
+     -webkit-transition: all .5s linear;
+     -o-transition: all .5s linear;
+     transition: all .5s linear;
+     background-position-x: -700px;
+     width: 200px;
+     height: 50px;
+     border-radius: .5em;
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: flex;
+     -webkit-box-orient: horizontal;
+     -webkit-box-direction: reverse;
+         -ms-flex-flow: row-reverse;
+             flex-flow: row-reverse;
+     -webkit-box-align: center;
+         -ms-flex-align: center;
+             align-items: center;
+     color: white;
+     transition: all .5s linear;
+     border: 2px solid transparent;
+ }
+
+ .botao3 a p {
+     font-weight: 800;
+     font-size: .9em;
+     width: 200px;
+     text-align: center;
+     position: absolute;
+ }
+
+ .botao3 a i {
+     font-size: 1.2em;
+     width: 100%;
+     padding-left: 13px;
+     pointer-events: none;
+     color: #1dacff;
+ }
+
+ .botao3 a:hover {
+     color: #1dacff;
+     border: 2px solid #1dacff;
+     background-color: transparent;
+     padding-left: 155px;
+     -webkit-transition: all .5s linear;
+     -o-transition: all .5s linear;
+     transition: all .5s linear;
+     -webkit-transform: scale(1.05);
+         -ms-transform: scale(1.05);
+             transform: scale(1.05);
+     
+ }
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <section class="section-one">
+        <div class="botao">
+            <a href="">
+                <p>Submit</p>
+                <i class="uil uil-message"></i>
+            </a>
+        </div>
+
+        <div class="botao2">
+            <a href="">
+                <p>Enviar</p>
+                <i class="uil uil-message"></i>
+            </a>
+        </div>
+
+        <div class="botao3">
+            <a href="">
+                <p>Enviar</p>
+                <i class="uil uil-message"></i>
+            </a>
+        </div>
+    </section>
+
+</body>
+
+</html>
