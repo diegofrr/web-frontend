@@ -1,7 +1,3 @@
-
-
-$(document).ready(function(){});
-
 function escuro() {
     $('body').addClass('dark-body');
     $('.titulo').addClass('light-letter');
