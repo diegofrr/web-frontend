@@ -2,11 +2,21 @@ const searchBtn = document.querySelector('.gallery__search button');
 const imagesList = document.querySelectorAll('.gallery__images-container .image-block img')
 const imagesKeywords = []
 let galleryResults = document.querySelector('.gallery__results');
+let galleryAllImages = document.querySelector('.gallery__images-container')
+let searchInput = document.querySelector('.gallery__search input')
+let allImagesBtn = document.querySelector('#allImages');
+
+
+allImagesBtn.addEventListener('click', () => {
+    galleryAllImages.classList.remove('displayNone');
+    galleryResults.classList.add('displayNone');
+})
 
 searchBtn.addEventListener('click', () => {
     let inputSearch = document.querySelector('.gallery__search input');
     searchImage(formatList(inputSearch.value.split(' ')));
-    resetInput(inputSearch);
+    galleryAllImages.classList.add('displayNone');
+    galleryResults.classList.remove('displayNone');
 })
 
 imagesList.forEach((img, indice) => {
@@ -17,22 +27,26 @@ imagesList.forEach((img, indice) => {
     });
 })
 
-function resetInput(i) {
-    i.value = ''
-    i.focus();
-}
-
 function galleryResultsHTML(results) {
-    galleryResults.innerHTML = '';
-    results.forEach((e) => {
-        let src = e.img.getAttribute('src');
-        let alt = e.img.getAttribute('alt')
-        galleryResults.innerHTML += (
-            `<div>
+    if (results.length === 0) {
+        galleryResults.innerHTML = (
+            `<p class="noneResults">
+            Nenhuma imagem<br>encontrada.
+            </p>`
+        );
+
+    } else {
+        galleryResults.innerHTML = '';
+        results.forEach((e) => {
+            let src = e.img.getAttribute('src');
+            let alt = e.img.getAttribute('alt')
+            galleryResults.innerHTML += (
+                `<div class="image-block">
                             <img src='${src}' alt='${alt}'>
                         </div>`
-        )
-    })
+            )
+        })
+    }
 }
 
 function searchImage(inputSearch) {
@@ -45,7 +59,6 @@ function searchImage(inputSearch) {
         });
 
     })
-    console.log(results);
     galleryResultsHTML(results);
 }
 
@@ -62,6 +75,6 @@ function formatList(list) {
             }
         })
         // remove itens repetidos da lista
-    var uniqueList = [...new Set(newList)]
+    let uniqueList = [...new Set(newList)]
     return uniqueList;
 }
